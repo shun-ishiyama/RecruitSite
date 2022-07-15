@@ -1,0 +1,184 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notoserifjp.css);
+
+/* body{
+    background: url(../img/Roots-T_KV_02.jpg) no-repeat 0 0 / cover, url(../img/Roots-T_KV_01.jpg) no-repeat 0 0 / cover;
+    font-family: 'Noto Serif JP SemiBold', sans-serif;
+} */
+
+.wrapper {
+    /* 適当な幅を指定 */
+    width: 2920px;
+    /* 適当な高さを指定 */
+    height: 1080px;
+    /* 基準位置とする */
+    position: relative;
+    /* はみ出し除去 */
+    overflow-x: hidden;
+}
+
+.box {
+    /* 画面サイズに合わせた幅を指定 */
+    width: 100vw;
+    /* 高さ自動を指定 */
+    height: auto;
+
+}
+
+/* 共通するCSS */
+.box img {
+    /* 適当な幅を指定 */
+    max-width: 100%;
+    /* 相対位置に指定 */
+    position: absolute;
+    /* 左上に固定 */
+    top: 0;
+    left: 0;
+}
+
+.box .frontImage {
+    animation-name: frontCircle;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+    clip-path: circle(0 at 80% 40%);
+}
+
+@keyframes frontCircle {
+    from {
+        clip-path: circle(0 at 80% 40%);
+    }
+
+    to {
+        clip-path: circle(120% at 80% 40%);
+    }
+}
+
+.box .copyCommon {
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* アニメーション後、状態維持 */
+    animation-fill-mode: forwards;
+    /* アニメーション秒数 */
+    animation-duration: 1.5s;
+    /*アニメーション進行具合：開始時と終了時は、かなり緩やかに変化 */
+    animation-timing-function: ease-in-out;
+    /* 開始までの秒数 */
+    animation-delay: 1.6s;
+}
+
+.box .copy1 {
+    top: 400px;
+    left: -750px;
+    font-size: 50px;
+    font-family: 'Noto Serif JP SemiBold', sans-serif;
+
+    animation-name: copy1Scroll;
+}
+
+@keyframes copy1Scroll {
+    from {
+        left: -750px;
+    }
+
+    to {
+        left: 190px;
+    }
+}
+
+.box .copy2 {
+    top: 500px;
+    left: 1920px;
+    font-size: 50px;
+    font-family: 'Noto Serif JP SemiBold', sans-serif;
+
+    animation-name: copy2Scroll;
+}
+
+@keyframes copy2Scroll {
+    from {
+        left: 1920px;
+    }
+
+    to {
+        left: 190px;
+    }
+}
+
+.box .copy3 {
+    top: 630px;
+    left: 1920px;
+    font-size: 35px;
+    font-family: 'Noto Sans JP', sans-serif;
+
+    animation-name: copy3Scroll;
+}
+
+@keyframes copy3Scroll {
+    from {
+        left: 1920px;
+    }
+
+    to {
+        left: 190px;
+    }
+}
+
+.box hr {
+    position: absolute;
+    background-color: white;
+    color: white;
+    top: 600px;
+    left: -750px;
+    height: 0.5px;
+    width: 720px;
+
+    animation-name: copy1Scroll;
+}
+
+@keyframes copy1Scroll {
+    from {
+        left: -750px;
+    }
+
+    to {
+        left: 190px;
+    }
+}
+
+.box .sq {
+    position: absolute;
+    top: 370px;
+    left: 0;
+    width: 1250px;
+    height: 360px;
+    opacity: 0.5;
+    background: linear-gradient(to right, #0059b3, #483d8b);
+
+    clip-path: inset(0 100% 0 0);
+
+    animation-name: sqScroll;
+    /* アニメーション後、状態維持 */
+    animation-fill-mode: forwards;
+    /* アニメーション秒数 */
+    animation-duration: 0.2s;
+    /*アニメーション進行具合：開始時と終了時は、かなり緩やかに変化 */
+    animation-timing-function: ease-in-out;
+    /* 開始までの秒数 */
+    animation-delay: 3.2s;
+}
+
+@keyframes sqScroll {
+    from {
+        /* 切り抜き clip-path:inset(上 右 下 左); */
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0);
+    }
+}
